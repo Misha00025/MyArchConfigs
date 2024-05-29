@@ -1,0 +1,135 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 27,
+	"width": 1800,
+	"margin-top": 10,
+
+	
+    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window", "tray"],
+    "modules-center": ["temperature", "cpu", "clock", "memory"],
+    "modules-right": ["pulseaudio", "network", "hyprland/language", "battery"],
+    "reload_style_on_change": true,
+
+
+    "cpu": {
+		"format": " {usage}% {avg_frequency}GHz",
+		"tooltip": true,
+		"interval": 1,
+    },
+
+
+	"memory": {
+		"format": " {}% ({used:0.1f}G/{total:0.1f}G)",
+		"tooltip": false,
+		"interval": 1,
+	},
+
+
+	"hyprland/window": {
+		"format": "{class}",
+		"separate-outputs": false,
+	},
+
+
+	"custom/menu": {
+		"format": "{icon}",
+		"format-icons": "󰣇",
+		"on-click": "wofi --show drun -c ~/.config/hypr/themes/hypr_arch/wofi/config -s /home/owl/.config/hypr/themes/hypr_arch/wofi/style.css",
+		"escape": true,
+		"tooltip": false
+	},
+
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			},
+		"tooltip": true
+	},
+
+
+	"hyprland/language": {
+	    "format": "{}",
+	    "format-en": "EN",
+	    "format-ru": "RU",
+	},
+
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 16
+	},
+
+
+	"clock": {
+		"interval": 60,
+		"tooltip": true,
+		"format": "{:%a %H:%M %d-%m-%Y}",
+		"tooltip-format": "{:%Y-%m-%d}"
+	},
+
+
+    	"pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-icons": {
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol"
+	},
+
+	"battery": {
+		"bat": "BAT1",
+		"interval": 1,
+		"states": {
+			"normal":80,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon} ({time})",
+		"format-icons": ["", "", "", "", ""],
+		"max-length": 25,
+		"format-charging": "{capacity}% {icon}⚡︎ ({time})",
+		"format-full": "{capacity}% {icon}"
+	},
+
+	"custom/weather": {
+	"format": "{}",
+	"interval": 10,
+	"exec": "~/.config/hypr/themes/hypr_deep_blue/scripts/weather.sh",
+	"tooltip": false
+	},
+
+
+	"network": {
+		"format": "{ifname}",
+		"format-wifi": "{essid} ({signalStrength}%) ",
+		"format-ethernet": "{ifname} ",
+		"format-disconnected": "", //An empty format will hide the module.
+		"format-disconnected": "",
+		"tooltip-format": "{ifname}",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		"tooltip-format-ethernet": "{ifname} ",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50,
+		"on-click": "nm-connection-editor"
+	},
+
+	"temperature": {
+		"interval": 1,
+		"states": {
+			"hot": 100,
+			"cold": 30,
+		},
+		"format": "❆ {temperatureC}°C",
+	},
+}
