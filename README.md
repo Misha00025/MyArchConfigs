@@ -19,3 +19,9 @@ sudo pacman -S base-devel gdb ninja gcc cmake libxcb xcb-proto xcb-util xcb-util
 ### Сам пакет
 yay waybar
 yay hyprland
+
+### Темы иконки и т.д.
+gsettings set org.gnome.desktop.interface icon-theme breeze-icons-dark  
+gsettings set org.gnome.desktop.interface gtk-theme Fantome
+gsettings set org.gnome.desktop.interface cursor-theme capitaine-cursors
+
