@@ -6,16 +6,16 @@ local default_opts = {noremap = true, silent = true}
 -- Переключение вкладок с помощью TAB или shift-tab (akinsho/bufferline.nvim)
 map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
-map('n', '<S-Esc>', ':BufferLineCloseLeft<CR>', default_opts)
-map('n', '<C-Esc>', ':BufferLineCloseRight<CR>', default_opts)
+map('n', 'q<Esc>', ':BufferLineCloseLeft<CR>', default_opts)
+map('n', 'e<Esc>', ':BufferLineCloseRight<CR>', default_opts)
 -- <F5> разные вариации нумераций строк, можно переключаться на ходу
-map('n', '<F5>', ':exec &nu==&rnu? "se nu!" : "se rnu!"<CR>', default_opts)
+-- map('n', '<F5>', ':exec &nu==&rnu? "se nu!" : "se rnu!"<CR>', default_opts)
 
 -----------------------------------------------------------
 -- РЕЖИМЫ
 -----------------------------------------------------------
 -- Выходим в нормальный режим через <jk>, чтобы не тянуться
-map('i', 'jk', '<Esc>', {noremap = true})
+-- map('i', 'jk', '<Esc>', {noremap = true})
 -----------------------------------------------------------
 -- ПОИСК
 -----------------------------------------------------------
@@ -35,3 +35,11 @@ map('n', '<S-F4>', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], de
 map('n', '<F8>', ':TagbarToggle<CR>', default_opts)
 -- <F4> Дерево файлов. Для иконок следует установить Nerd Font
 map('n', '<F4>', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', default_opts)
+map('n', '<A-Tab>', ':NvimTreeRefresh<CR>:wincmd p<CR>', default_opts)
+map('i', '<A-Tab>', '<Esc>:NvimTreeRefresh<CR>:wincmd p<CR>', default_opts)
+
+-- Мои настройки
+map('n', '', ':w<CR>', default_opts)
+map('i', '', '<Esc>:w<CR>i', default_opts)
+map('n', '<C-Esc>', ':q<CR>', default_opts)
+map('n', '<C-A-Esc>', ':qa<CR>', default_opts)

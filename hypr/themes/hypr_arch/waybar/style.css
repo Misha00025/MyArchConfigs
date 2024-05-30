@@ -29,9 +29,7 @@ window#waybar {
 	padding: 4px 0px;
 	margin: 0px 7px;
 }
-#workspaces button:hover {
-	color: @gr;
-}
+
 #workspaces button.active {
 	color: @fg;
 }
@@ -128,6 +126,9 @@ window#waybar {
 	font-weight: bold;
 }
 
+#workspaces button:hover,
+#custom-menu:hover,
+#pulseaudio:hover,
 #network:hover {
 	background-color: @gr;
 }

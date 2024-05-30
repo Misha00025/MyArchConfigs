@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+CONFPATH="$HOME/.config"
+
+echo DIR = $DIR
+echo CONFPATH = $CONFPATH
+
+for cdir in 'nvim' 'hypr'; do
+    if [ "$1" = "in" ]; 
+    then
+        echo Copyng $CONFPATH/$cdir to $DIR
+        cp -f -r $CONFPATH/$cdir $DIR
+    elif [ "$1" = "out" ];
+    then
+        echo Copyng $DIR/$cdir to $CONFPATH
+        cp -f -r $DIR/$cdir $CONFPATH/
+    fi
+done
