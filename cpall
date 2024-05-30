@@ -6,7 +6,7 @@ CONFPATH="$HOME/.config"
 echo DIR = $DIR
 echo CONFPATH = $CONFPATH
 
-for cdir in 'nvim' 'hypr'; do
+for cdir in `cat dirs.txt`; do
     if [ "$1" = "in" ]; 
     then
         echo Copyng $CONFPATH/$cdir to $DIR
