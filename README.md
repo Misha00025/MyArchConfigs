@@ -1,8 +1,8 @@
 # MyArchConfigs
 
 ## Установка пакетов
-
-pacman -S base-devel git 
+### Средства разработки и установки програм из исходников
+pacman -S base-devel git python gcc cmake
 
 ## Установка Yay
 
@@ -12,14 +12,20 @@ makepkg -is
 
 ## Установка Hyprland
 
-### Зависимости
-pacman -S kitty dolphin wofi pulseaudio alsa-tools waybar hyprpaper
-sudo pacman -S base-devel gdb ninja gcc cmake libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland cmake wlroots mesa git meson polkit pulseaudio pavucontrol telegram-desktop mousepad gimp inkscape xdg-desktop-portal-wlr transmission-gtk python imv mpv nemo waybar grim slurp swaybg swaylock mako jq wofi htop cmus neofetch ranger unzip ttf-nerd-fonts-symbols
-sudo pacman -S fmt spdlog gtkmm3 libdbusmenu-gtk3 upower libmpdclient sndio gtk-layer-shell scdoc
-
-### Сам пакет
-yay waybar
-yay hyprland
+### Основные программы
+sudo pacman -S kitty dolphin wofi mousepad
+### Звук, блютуз и др.
+sudo pacman -S pulseaudio pamixer bluez blueman
+### Необязательные программы
+sudo pacman -S telegram-desktop gimp inkscape
+### Утилиты
+sudo pacman -S unzip alsa-tools htop
+### Шрифты
+sudo pacman -S ttf-nerd-fonts-symbols
+### Дополнительно зависимости
+sudo pacman -S gdb ninja libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman cairo pango seatd libxkbcommon xcb-util-wm mesa meson polkit pavucontrol transmission-gtk imv mpv grim slurp jq neofetch fmt spdlog gtkmm3 libdbusmenu-gtk3 upower libmpdclient sndio gtk-layer-shell scdoc
+### Hyprland
+sudo pacman -S waybar hyprpaper hyprland swaybg swaylock wayland-protocols xdg-desktop-portal-wlr xorg-xwayland wlroots
 
 ### Темы иконки и т.д.
 gsettings set org.gnome.desktop.interface icon-theme breeze-icons-dark  
