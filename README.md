@@ -13,7 +13,7 @@ sudo pacman -S pulseaudio pamixer bluez blueman
 ### Необязательные программы
 sudo pacman -S telegram-desktop gimp inkscape
 ### Утилиты
-sudo pacman -S unzip alsa-tools htop bc 
+sudo pacman -S unzip alsa-tools htop bc acpid
 ### Шрифты
 sudo pacman -S ttf-nerd-fonts-symbols noto-fonts ttf-dejavu ttf-liberation ttf-hack ttf-carlito ttf-jetbrains-mono ttf-nerd-fonts-symbols-common
 ### Дополнительно зависимости
