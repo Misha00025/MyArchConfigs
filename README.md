@@ -13,7 +13,7 @@ sudo pacman -S pulseaudio pamixer bluez blueman
 ### Необязательные программы
 sudo pacman -S telegram-desktop gimp inkscape
 ### Утилиты
-sudo pacman -S unzip alsa-tools htop
+sudo pacman -S unzip alsa-tools htop bc 
 ### Шрифты
 sudo pacman -S ttf-nerd-fonts-symbols noto-fonts ttf-dejavu ttf-liberation ttf-hack ttf-carlito ttf-jetbrains-mono ttf-nerd-fonts-symbols-common
 ### Дополнительно зависимости
@@ -28,6 +28,8 @@ makepkg -is
 
 ### Установлено с yay
 yay ttf-paratype
+yay yandex-browser
+yay laptop-mode-tools
 
 ### Темы иконки и т.д.
 gsettings set org.gnome.desktop.interface icon-theme breeze-icons-dark  
