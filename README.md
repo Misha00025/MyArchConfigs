@@ -21,7 +21,7 @@ sudo pacman -S telegram-desktop gimp inkscape
 ### Утилиты
 sudo pacman -S unzip alsa-tools htop
 ### Шрифты
-sudo pacman -S ttf-nerd-fonts-symbols
+sudo pacman -S ttf-nerd-fonts-symbols noto-fonts ttf-dejavu ttf-liberation
 ### Дополнительно зависимости
 sudo pacman -S gdb ninja libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman cairo pango seatd libxkbcommon xcb-util-wm mesa meson polkit pavucontrol transmission-gtk imv mpv grim slurp jq neofetch fmt spdlog gtkmm3 libdbusmenu-gtk3 upower libmpdclient sndio gtk-layer-shell scdoc
 ### Hyprland
