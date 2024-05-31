@@ -19,7 +19,7 @@ sudo pacman -S ttf-nerd-fonts-symbols noto-fonts ttf-dejavu ttf-liberation ttf-h
 ### Дополнительно зависимости
 sudo pacman -S gdb ninja libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman cairo pango seatd libxkbcommon xcb-util-wm mesa meson polkit pavucontrol transmission-gtk imv mpv grim slurp jq neofetch fmt spdlog gtkmm3 libdbusmenu-gtk3 upower libmpdclient sndio gtk-layer-shell scdoc
 ### Hyprland
-sudo pacman -S waybar hyprpaper hyprland swaybg swaylock hyprshot wayland-protocols xdg-desktop-portal-wlr xorg-xwayland wlroots
+sudo pacman -S waybar hyprpaper hyprland swaybg swaylock wayland-protocols xdg-desktop-portal-wlr xorg-xwayland wlroots
 
 ## Установка Yay
 git clone https://aur.archlinux.org/yay.git
@@ -27,6 +27,7 @@ cd yay
 makepkg -is
 
 ### Установлено с yay
+yay hyprshot
 yay ttf-paratype
 yay yandex-browser
 yay laptop-mode-tools
