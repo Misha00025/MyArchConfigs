@@ -6,9 +6,9 @@
 	"margin-top": 10,
 
 	
-    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window", "tray"],
+    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
     "modules-center": ["temperature", "cpu", "clock", "memory"],
-    "modules-right": ["pulseaudio", "network", "hyprland/language", "battery"],
+    "modules-right": ["tray","pulseaudio", "network", "backlight", "hyprland/language", "battery"],
     "reload_style_on_change": true,
 
 
@@ -65,7 +65,7 @@
 
 
 	"tray": {
-		"icon-size": 16,
+		"icon-size": 20,
 		"spacing": 16
 	},
 
@@ -132,4 +132,10 @@
 		},
 		"format": "❆ {temperatureC}°C",
 	},
+
+    "backlight": {
+	    "device": "intel_backlight",
+	    "format": "{icon}{percent}%",
+	    "format-icons": ["", ""]
+    },
 }
