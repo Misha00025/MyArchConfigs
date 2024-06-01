@@ -11,7 +11,7 @@ sudo pacman -S kitty dolphin wofi mousepad
 ### Звук, блютуз и др.
 sudo pacman -S pulseaudio pamixer bluez blueman
 ### Необязательные программы
-sudo pacman -S telegram-desktop gimp inkscape
+sudo pacman -S telegram-desktop gimp inkscape 
 ### Утилиты
 sudo pacman -S unzip alsa-tools htop bc acpid
 ### Шрифты
@@ -27,7 +27,9 @@ cd yay
 makepkg -is
 
 ### Установлено с yay
+yay davfs2
 yay hyprshot
+yay onlyoffice
 yay ttf-paratype
 yay yandex-browser
 yay laptop-mode-tools
