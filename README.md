@@ -27,6 +27,7 @@ cd yay
 makepkg -is
 
 ### Установлено с yay
+yay naps2
 yay davfs2
 yay hyprshot
 yay onlyoffice
