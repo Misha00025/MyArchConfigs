@@ -1,5 +1,5 @@
 * {
-	border-radius: 20;
+	border-radius: 5;
 	border: none;
 	font-family: JetBrainsMono-Bold, Symbols Nerd Font;
 	font-weight: normal;
@@ -8,7 +8,7 @@
 	margin: 0px 5px;
 }
 
-@define-color bg #262a32;
+@define-color bg rgb(50, 50, 70);
 @define-color fg #d8dee8;
 @define-color gr #545d70;
 @define-color red #f7768e;
@@ -16,18 +16,23 @@
 @define-color blue #4b4e6f;
 @define-color cyan #0db9d7;
 
+window {
+  padding: 0px 0px;
+}
+
 window#waybar {
-	background-color: rgba(48, 80, 151, 0.233);
+	background-color: rgba(30, 30, 30, 0.7);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    margin: 0px 0px;
 }
 
 #workspaces button {
 	color: @gr;
 	background-color: @bg;
-	padding: 4px 0px;
-	margin: 0px 7px;
+	padding: 4px 2px;
+	margin: 0px 2px;
 }
 
 #workspaces button.active {
@@ -37,18 +42,16 @@ window#waybar {
 	color: @red;
 }
 
-#battery {
-	color: #8efd78;
-    background-color: @bg;
-    padding: 0px 10px;
-    margin: 0px 10px;
-}
 
 #battery.charging,
 #battery.charging.normal,
 #battery.charging.warning
 {
 	color: rgb(167, 243, 14);
+}
+
+#battery {
+  color: rgb(100, 255, 100);
 }
 
 #battery.normal {
@@ -64,47 +67,19 @@ window#waybar {
 }
 
 #temperature {
-	padding: 0 10px;
-	margin: 0 6px;
 	color:rgb(0, 247, 255);
-	background-color: @bg;
-}
-
-#temperature.cold {
-	padding: 0 10px;
-	margin: 0 6px;
-	color:rgb(0, 119, 255);
-	background-color: @bg;
-}
-
-#temperature.hot {
-	padding: 0 10px;
-	margin: 0 6px;
-	color:rgb(255, 145, 0);
-	background-color: @bg;
 }
 
 #cpu,
 #memory {
-	padding: 0 10px;
-	margin: 0 6px;
 	color: #ffeea2;
-	background-color: @bg;
 }
 
-#network,
 #window,
-#custom-media,
-#custom-cmus,
-#custom-weather,
-#custom,
-#tray,
-#language,
-#pulseaudio,
-#clock
- {
+#language
+{
 	padding: 0 10px;
-	margin: 0 6px;
+	margin: 0 2px;
 	color: @fg;
 	background-color: @bg;
 }
@@ -113,17 +88,11 @@ window#waybar {
 	background-color: @bg;
 	color: @cyan;
 	padding: 0px 10px;
-	margin: 0px 10px;
+	margin: 0px 4px;
 }
 
 #custom-sep {
 	color: rgba(0, 0, 0, 0.0);
-}
-
-#window {
-	background-color: @bg;
-	color: @cyan;
-	font-weight: bold;
 }
 
 #workspaces button:hover,

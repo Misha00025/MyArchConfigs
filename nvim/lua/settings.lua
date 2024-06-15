@@ -1,3 +1,5 @@
+vim.cmd('highlight NvimTreeFolderIcon guibg=blue')
+
 local opt = vim.opt
 
 -----------------------------------------------------------
@@ -32,7 +34,7 @@ opt.foldcolumn = '2'         --Ширина колонки для фолдов
 opt.colorcolumn =  '119'     --Расположение цветной колонки
 
 -- remove line lenght marker for selected filetypes
-vim.cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
+-- vim.cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
 
 opt.cursorline = true        -- Подсветка строки с курсором
 opt.termguicolors = true
@@ -98,6 +100,17 @@ local luasnip = require 'luasnip'
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
+    mapping = cmp.mapping.preset.insert({
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+      fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+      end
+    end, { "i", "s" }),
+
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body)

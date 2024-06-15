@@ -35,8 +35,15 @@ return require('packer').startup(function(use)
   -- Файловый менеджер
   use { 'kyazdani42/nvim-tree.lua',
       requires = 'kyazdani42/nvim-web-devicons',
-      config = function() 
-      require'nvim-tree'.setup {}
+      config = function()
+      require'nvim-tree'.setup {
+        git = {
+          enable = true,
+        },
+        view = {
+          side = "left",
+        },
+      }
   end, }
   --- popup окошки
   use 'nvim-lua/popup.nvim'
@@ -69,6 +76,7 @@ return require('packer').startup(function(use)
   ---------------------------------------------------------
   -- Collection of configurations for built-in LSP client
   use 'neovim/nvim-lspconfig'
+  -- use 'neoclide/coc.nvim'
   use 'williamboman/nvim-lsp-installer'
 
   -- Автодополнялка
@@ -91,8 +99,12 @@ return require('packer').startup(function(use)
   ---------------------------------------------------------
   -- РАЗНОЕ
   ---------------------------------------------------------
-  -- Даже если включена русская раскладка, то nvim-команды будут работать
+  use 'OmniSharp/omnisharp-vim'
+  --- Даже если включена русская раскладка, то nvim-команды будут работать
   use 'powerman/vim-plugin-ruscmd'
   use 'tpope/vim-fugitive'
   use 'ap/vim-css-color'
+  use 'vim-python/python-syntax'
+  -- use 'python-mode/python-mode'
+  -- use 'vim-python/python-syntax'
 end)

@@ -3,5 +3,5 @@
 "Plug 'preservim/nerdtree'
 "call plug#end()
 
-
+let g:python_highlight_all = 1
 :source ~/.config/nvim/conf-lua.lua
