@@ -21,7 +21,7 @@ sudo pacman -S telegram-desktop gimp inkscape
 ```
 ### Утилиты
 ```
-sudo pacman -S unzip alsa-tools htop bc acpid
+sudo pacman -S unzip alsa-tools htop bc acpid bash-completion
 ```
 ### Шрифты
 ```
