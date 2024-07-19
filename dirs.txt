@@ -1,2 +1,2 @@
-hypr
-nvim
+.config/hypr
+.config/nvim
