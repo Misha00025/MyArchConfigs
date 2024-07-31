@@ -50,6 +50,7 @@ yay onlyoffice
 yay ttf-paratype
 yay yandex-browser
 yay laptop-mode-tools
+yay minetime-bin
 ```
 ### Темы иконки и т.д.
 ```
