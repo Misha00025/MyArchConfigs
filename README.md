@@ -50,6 +50,7 @@ yay onlyoffice
 yay ttf-paratype
 yay yandex-browser
 yay laptop-mode-tools
+yay visual-studio-code-bin
 ```
 ### Темы иконки и т.д.
 ```
