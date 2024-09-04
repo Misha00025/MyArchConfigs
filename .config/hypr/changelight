@@ -1,0 +1,31 @@
+#!/bin/bash
+
+CHANGE_LEVEL=2000
+MONITOR="/sys/class/backlight/intel_backlight/brightness"
+MIN_VAL=2000
+MAX_VAL=120000
+
+# determine new brightness level
+if [ "$1" == "i" ]; then
+    NEW_BRIGHTNESS=$(echo "$(cat ${MONITOR}) + ${CHANGE_LEVEL}" | bc)
+elif [ "$1" == "d" ]; then
+    NEW_BRIGHTNESS=$(echo "$(cat ${MONITOR}) - ${CHANGE_LEVEL}" | bc)
+fi
+
+# echo $NEW_BRIGHTNESS
+
+if [ $NEW_BRIGHTNESS -le $MIN_VAL ]; then
+    NEW_BRIGHTNESS=$MIN_VAL
+fi
+if [ $NEW_BRIGHTNESS -ge $MAX_VAL ]; then
+    NEW_BRIGHTNESS=$MAX_VAL
+fi
+
+# echo $NEW_BRIGHTNESS
+
+# notify-send --icon=notification-display-brightness "Try change Monitor Brightness"
+
+# change the brightness of the monitor
+echo "$NEW_BRIGHTNESS" | sudo tee /sys/class/backlight/intel_backlight/brightness
+
+# notify-send --icon=notification-display-brightness "Monitor Brightness changed"

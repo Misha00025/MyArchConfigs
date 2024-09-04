@@ -10,10 +10,12 @@ for cdir in `cat dirs.txt`; do
     if [ "$1" = "in" ]; 
     then
         echo Copyng $CONFPATH/$cdir to $DIR
-        cp -f -r $CONFPATH/$cdir $DIR
+	mkdir $DIR/$cdir
+        cp -f -r $CONFPATH/$cdir/* $DIR/$cdir
     elif [ "$1" = "out" ];
     then
         echo Copyng $DIR/$cdir to $CONFPATH
-        cp -f -r $DIR/$cdir $CONFPATH/
+        mkdir $CONFPATH/$cdir
+	cp -f -r $DIR/$cdir/* $CONFPATH/$cdir
     fi
 done
